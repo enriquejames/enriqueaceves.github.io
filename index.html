@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title id="title">
+            Enrique Aceves Your Next Best
+        </title>
+        <link rel="icon" type="image/png" href="/_431/favicon-32x32.png">
+        <link rel="shortcut icon" type="image/x-icon" href="/_431/favicon.ico">
+        
+
+        <!-- Internal JavaScript -->
+        <!-- First Event listener allows toggling between light and dark modes -->
+        <!-- econd even listener opens the modal content to show contact information -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function(){
+                var toggle = document.querySelector(".switch");
+                var switchSlider = toggle.querySelector(".switch-slider");
+                var switchLabel = toggle.querySelector(".switch-label");
+                toggle.addEventListener("click", function(){
+                    document.body.classList.toggle("dark-mode");
+                    if(document.body.classList.contains("dark-mode")){
+                        switchSlider.classList.add("switch-slider-right");
+                        switchLabel.innerHTML = "Dark Mode";
+                    } else {
+                        switchSlider.classList.remove("switch-slider-right");
+                        switchLabel.innerHTML = "Light Mode";
+                    }
+                });
+            });
+
+            document.addEventListener("DOMContentLoaded", function() {
+                var modal = document.getElementById("myModal");
+                var btn = document.getElementById("myBtn");
+                var span = document.getElementsByClassName("close")[0];
+                btn.onclick = function() {
+                    modal.style.display = "block";
+                }
+                span.onclick = function() {
+                    modal.style.display = "none";
+                }
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            });
+        </script>
+        
+<!-- Internal CSS -->
+        <style>
+
+            @keyframes fadeIn {
+                0% { opacity: 0; }
+                100% { opacity: 1; }
+            }
+            
+
+            #name{
+                color: rgb(255, 255, 255);
+                font-size: 50px;
+                font-family: Arial;
+                padding-bottom: -100px;
+                
+            }
+
+            #main-header{
+                color: rgb(96, 136, 189);
+                font-family: Arial;
+                padding-right: 30px; 
+                padding-right: 30px;
+                animation: fadeIn 8s;
+            }
+
+            #role {
+            
+                font-size: 40px;
+                font-weight: lighter;   
+            }
+            #linkedin{
+                width: 35px;
+                height: 35px;
+                padding-right: 10px;
+            }
+
+            #linkedin-txt{
+                font-family: Arial;
+                font-size: 25px;
+                justify-content: right;
+            }
+
+            #email{
+                width: 45px;
+                height: 45px;
+                
+            }
+            #email-txt{
+                font-family: Arial;
+                font-size: 25px;
+                justify-content: right;
+            }
+
+            #github{
+                width: 35px;
+                height: 35px;
+                padding-right: 27px;
+            }
+            #github-txt{
+                font-family: Arial;
+                font-size: 25px;
+                justify-content: right;
+            }
+
+            .about{
+                color: white;
+                
+                font-family: Arial;
+                font-size: 25px;
+                letter-spacing: .55px;
+               
+            }
+
+            body {
+                background-color: rgb(34, 34, 34);
+                padding-left: 40px;
+            }
+            .dark-mode {
+                background-color:rgb(207, 207, 207)
+                
+            }
+
+            .dark-mode  div, .dark-mode p{
+                color: rgb(25, 25, 25)
+            }
+
+            .dark-mode #j-title, .dark-mode p{
+                color: rgb(25, 25, 25)
+            }
+
+            .dark-mode #name, .dark-mode p{
+                color: rgb(25, 25, 25)
+            }
+            .dark-mode #header, .dark-mode p{
+                color: rgb(25, 25, 25)
+            }
+
+            .dark-mode #school, .dark-mode p{
+                color: rgb(25, 25, 25)
+            }
+
+            .dark-mode #en-date, .dark-mode p{
+                color: rgb(25, 25, 25)
+            }
+
+            #content{
+                padding-top: 30px;
+                font-family: arial;
+                font-size: 25px;
+                padding-right: 30px; 
+                padding-right: 30px;
+                animation: fadeIn 10s;
+                
+                
+            }
+
+            #experience{
+                color:rgb(96, 136, 189);
+                font-family: Arial;
+                font-size: 40px;
+                
+                
+            }
+            
+            #j-descr {
+                color: white;
+                padding-right: 45px; 
+                padding-right: 45px;
+                max-width: 1600px;
+
+            }
+
+            #j-title {
+                color: white;
+                font-style: italic;
+                font-weight: bolder;
+                padding-top: 40px;
+                
+            }
+
+            #work-date{
+                font-style: italic;
+                
+            }
+            #profile-img{
+                position:static;
+                float: right;
+                margin: 20px;
+                right: 20px;
+                top: 20px;
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                }
+
+            #education{
+                color: rgb(96, 136, 189);
+                padding-bottom: 40px;
+                padding-right: 30px; 
+                padding-right: 30px;
+                animation: fadeIn 10s;
+            }
+
+            #school{
+                color: white;
+                padding-top: 30px;
+                font-weight: bold;
+                
+            }
+
+            #education-title{
+                padding-top: 30px;
+                font-size: 40px;
+            }
+
+            #education{
+                font-family: arial; 
+                font-size: 25px;
+            }
+
+
+            #en-date{
+                color: white;
+                font-style: italic;
+                
+            }
+
+            a:visited {
+                color: rgb(96, 136, 189);
+            }
+
+        
+            .dark-mode button #switch-label {
+                background-color:rgb(25, 25, 25);
+                border: none;
+                padding: 20px 40px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 30px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 12px;
+            }
+            .switch-slider {
+                width: 15px;
+                height: 20px;
+                background-color: rgb(255, 255, 255);
+                border-radius: 10px;
+                transition: .4s;
+            }
+            .switch-slider-right {
+                transform: translateX(20px);
+                background-color:rgb(25, 25, 25);
+            }
+            .switch{
+                font-weight: bold;
+                padding-top: 20px;
+            }
+  
+
+
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                right: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgb(0,0,0);
+                background-color: rgba(0,0,0,0.4);
+                padding-top: 60px;
+            }
+            .modal-content {
+                background-color: #fefefe;
+                margin: 5% auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 80%;
+            }
+            .close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+            .close:hover,
+            .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+
+            .contact-me-button {
+                background-color: rgb(96, 136, 189); 
+                color: white; 
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: auto;
+                transition: all 0.3s ease; 
+                font-family: Arial;
+                font-weight: bold;
+            }
+            
+            .contact-me-button:hover {
+                background-color: rgb(96, 136, 189); 
+            }
+            
+        </style>
+    </head>
+
+    <!-- HTML  Content -->
+        <div>
+            <header id="main-header">
+                <img src="https://i.imgur.com/edq141v.jpg" alt="profile-img" id="profile-img">
+                
+                 <h1 id="name">
+                        Enrique J Aceves <button id="myBtn" class="contact-me-button">Contact Me</button>
+                    </h1>
+                    
+                
+
+                    <div id="myModal" class="modal">
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <section id="links">
+                            <a id="email" href="mailto:enrique.j.aceves@gmail.com" target="_blank" rel="noopener noreferrer"><span id="email-txt">Email:  </span><img src="https://i.imgur.com/uO2oICp.jpg" alt="email" id="email"style="padding-left:  35px;"></a></p>
+                            <p class="link"><a href="https://www.linkedin.com/in/enriquejaceves/" target="_blank" rel="noopener noreferrer"><span id="linkedin-txt">LinkedIn:  </span><img src="https://i.imgur.com/fL1lU38.png" alt="linkedin" id="linkedin" style="padding-left:  10px;"></a></p>
+                            <p class="link"><a href="https://github.com/enriquejames/" target="_blank" rel="noopener noreferrer"><span id="github-txt">GitHub:  </span><img src="https://i.imgur.com/iVawjGB.png" alt="github" id="github"style="padding-left:  28px;"></a></p>
+                            </a></p>
+                        </section>
+                        </div>
+                    </div>
+
+
+                <div class="switch">
+                    <span class="switch-label">Light Mode</span>
+                    <div class="switch-slider round"></div>
+                </div>
+
+                <h2>
+                    <h2 id="role">Senior Reporting Analyst at 
+                    <a href="https://auctane.com/" target="_blank" rel="noopener noreferrer">Auctane.com</a></h2>
+                </h2>
+                <div class="about"><span><b>About:</b> Senior Reporting Analyst at Auctane.com. I provide leadership and other departments with the necessary reports and data analytics for making sound business decisions to 
+                    improve customer experience and achieve department goals. I also monitor and analyze customer support call center data to assist management with ensuring optimal operational efficiency and 
+                    quality. Currently studying towards a Bachelor of Science in Computer Science at California State University, Fullerton, focusing on Data Science and Reporting. Additionally, with experience 
+                    in fraud prevention having worked as a Fraud Prevention Analyst and Manager at Stamps.com. I have multiple certifications in motivating and engaging employees, and I have strong analytical, 
+                    reporting, and communication skills.</span></div>
+            </header>
+        </div>
+        <div>
+            <section id =content>
+                <span id="experience">Experience</span>
+                <header id="j-title">Auctane.com (Formerly Stamps.com), El Segundo, CA &mdash;<br>Senior Reporting Analyst</header>
+                <span id="work-date">2021 - PRESENT<br><br></span> 
+                <body id="j-descr">
+                    Responsible for providing leadership, as well as other departments, with the necessary reports and data analytics for making sound business decisions to improve overall customer experience. 
+                    Also responsible for providing Customer Service leadership and all contact center agents with their individual and team KPIs to assist with improving efficiency, as well as overall customer 
+                    interaction quality. Additionally, CC Reporting team is responsible for analyzing call volume patterns to create staffing models and scheduling recommendations to ensure consistent SLA adherence. 
+                    Responsible for monitoring and analyzing customer support call center data to assist management with ensuring optimal operational effectiveness and in depth analysis of customer support data, 
+                    generate and disseminate reports, make recommendations for improvement.
+                    <ul>
+                        <li>Provide workload analysis and create staffing models and coverage schedules for various team</li>
+                        <li>Provide call volume and staffing forecasting and agent scheduling. </li>
+                        <li> Updating and distributing existing and new reports.</li>
+                        <li>Creating new reports based on business needs and requirements provided by the management team.</li>
+                        <li>Design and produce standard and ad-hoc reports and various data visualization reporting solutions.</li>
+                        <li>Gather and document report requirements and write complex report specifications to meet business needs.</li>
+                        <li>Validate and test reports to ensure accuracy and quality.</li>
+                        <li>Recommending and implementing improvements and enhancements to existing reports and processes by analyzing customer contact data.</li>
+                    </ul>
+                </body>
+
+
+                <header id="j-title">Stamps.com, El Segundo, CA &mdash;<br> Fraud Prevention Manager </header>
+                <span id="work-date">January 2020 - August 2021,<br><br></span>
+                <body id="j-descr">
+                    Managed the Fraud Prevention team for detecting, preventing, and investigating fraudulent activities across our platforms.
+                    <ul>
+                    <li>Lead and manage the Fraud Prevention Team, ensuring high performance, development, and engagement.</li>
+                    <li>Develop and implement comprehensive fraud prevention strategies to minimize risk and protect company assets.</li>
+                    <li>Oversee the analysis of transactional data and patterns to identify, evaluate, and prevent fraudulent activities.</li>
+                    <li>Collaborate with internal teams, including IT, Customer Service, and Compliance, to enhance fraud detection systems and processes.</li>
+                    <li>Stay abreast of industry trends, technologies, and regulatory changes related to fraud prevention.</li>
+                    <li>Develop and maintain policies and procedures for effective fraud management.</li>
+                    <li>Conduct regular training sessions for the team and other departments on fraud awareness and prevention.</li>
+                    <li>Manage relationships with external vendors and law enforcement agencies as needed.</li>
+                    <li>Prepare and present reports to senior management on fraud trends, risks, and prevention strategies.</li>
+                    </ul>   
+                </body>
+
+
+                <header id="j-title">Stamps.com, El Segundo, CA &mdash;<br> Team Lead, Fraud Analyst </header>
+                <span id="work-date">July 2019 - Jan 2020,<br><br></span>
+                <body id="j-descr">
+                    Supervision of Fraud Associates, Manage attendance, system issues, and time record reconciliation. Train and develop Fraud Prevention Analysts. Assign and enforce daily team tasks for on time 
+                    completion and with accuracy. Assist Fraud Prevention Coach with operational projects. Present strategic opportunities to improve the fraud team operations including people, process and technology. 
+                </body>
+
+
+                <header id="j-title">Stamps.com, El Segundo, CA &mdash;<br> Fraud Analyst </header>
+                <span id="work-date">July2017 - July 2019,<br><br></span>
+                <body id="j-descr">
+                    Evaluating accounts for fraudulent activity, identify new fraud patterns and recommend methods to address them, and preparing periodic reports. Perform account research and process requests received 
+                    from the Customer Care department. Perform periodic analysis of fraud screening results. Creating fraud screening parameters for automation. Chargeback analysis and Page 2 of 3 collection. Provide 
+                    New hire and team training. Primary contact for the department. Assist all departments with inquiries and fraud related requests. 
+                </body>
+
+
+                <header id="j-title">Newegg.com, City of Industry, CA &mdash;<br> Fraud Analyst - Digital Investigations </header>
+                <span id="work-date">April 2016 - January 2017,<br></span>
+                
+
+            </section>
+            <p>
+
+            </p>
+        </div>
+       <div id="education">
+        <header id="education-title">Education<br></header>
+        <body>
+            <header id="school">Cal State Fullerton, CA &mdash;<br> Computer Science, BS </header>
+                <span id="en-date">August 2021 - December 2024,<br></span> 
+        </body>
+
+        <body>
+            <header id="school">Rio Hondo Collenge Whittier, CA &mdash;<br> General </header>
+                <span id="en-date">August 2019 - May 2021,<br></span> 
+        </body>
+
+        <body>
+            <header id="school">Schurr High School Montebello, CA &mdash;<br> High School Diploma </header>
+                
+        </body>
+    </div>
+    
+</html>
