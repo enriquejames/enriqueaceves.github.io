@@ -1,147 +1,115 @@
-
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
 
-
-#name{
+.name {
     color: rgb(255, 255, 255);
     font-size: 50px;
     font-family: Arial;
     padding-bottom: -100px;
-    
 }
 
-#main-header{
+.main-header {
     color: rgb(96, 136, 189);
     font-family: Arial;
-    padding-right: 30px; 
     padding-right: 30px;
     animation: fadeIn 8s;
 }
 
-#role {
-
+.role {
     font-size: 40px;
-    font-weight: lighter;   
+    font-weight: lighter;
 }
-#linkedin{
+
+.linkedin {
     width: 35px;
     height: 35px;
     padding-right: 10px;
 }
 
-#linkedin-txt{
+.linkedin-txt {
     font-family: Arial;
     font-size: 25px;
     justify-content: right;
 }
 
-#email{
+.email {
     width: 45px;
     height: 45px;
-    
 }
-#email-txt{
+
+.email-txt {
     font-family: Arial;
     font-size: 25px;
     justify-content: right;
 }
 
-#github{
+.github {
     width: 35px;
     height: 35px;
     padding-right: 27px;
 }
-#github-txt{
+
+.github-txt {
     font-family: Arial;
     font-size: 25px;
     justify-content: right;
 }
 
-.about{
+.about {
     color: white;
-    
     font-family: Arial;
     font-size: 25px;
     letter-spacing: .55px;
-   
 }
 
 body {
     background-color: rgb(34, 34, 34);
     padding-left: 40px;
 }
+
 .dark-mode {
-    background-color:rgb(207, 207, 207)
-    
+    background-color: rgb(207, 207, 207);
 }
 
-.dark-mode  div, .dark-mode p{
-    color: rgb(25, 25, 25)
+.dark-mode div, .dark-mode p {
+    color: rgb(25, 25, 25);
 }
 
-.dark-mode #j-title, .dark-mode p{
-    color: rgb(25, 25, 25)
-}
-
-.dark-mode #name, .dark-mode p{
-    color: rgb(25, 25, 25)
-}
-.dark-mode #header, .dark-mode p{
-    color: rgb(25, 25, 25)
-}
-
-.dark-mode #school, .dark-mode p{
-    color: rgb(25, 25, 25)
-}
-
-.dark-mode #en-date, .dark-mode p{
-    color: rgb(25, 25, 25)
-}
-
-#content{
+.content {
     padding-top: 30px;
-    font-family: arial;
+    font-family: Arial;
     font-size: 25px;
-    padding-right: 30px; 
     padding-right: 30px;
     animation: fadeIn 10s;
-    
-    
 }
 
-#experience{
-    color:rgb(96, 136, 189);
+.experience {
+    color: rgb(96, 136, 189);
     font-family: Arial;
     font-size: 40px;
-    
-    
 }
 
-#j-descr {
+.job-description {
     color: white;
-    padding-right: 45px; 
     padding-right: 45px;
     max-width: 1600px;
-
 }
 
-#j-title {
+.job-title {
     color: white;
     font-style: italic;
     font-weight: bolder;
     padding-top: 40px;
-    
 }
 
-#work-date{
+.work-date {
     font-style: italic;
-    
 }
-#profile-img{
-    position:static;
+
+.profile-img {
+    position: static;
     float: right;
     margin: 20px;
     right: 20px;
@@ -149,47 +117,37 @@ body {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    }
+}
 
-#education{
+.education {
     color: rgb(96, 136, 189);
     padding-bottom: 40px;
-    padding-right: 30px; 
     padding-right: 30px;
     animation: fadeIn 10s;
 }
 
-#school{
+.school {
     color: white;
     padding-top: 30px;
     font-weight: bold;
-    
 }
 
-#education-title{
+.education-title {
     padding-top: 30px;
     font-size: 40px;
 }
 
-#education{
-    font-family: arial; 
-    font-size: 25px;
-}
-
-
-#en-date{
+.enrollment-date {
     color: white;
     font-style: italic;
-    
 }
 
 a:visited {
     color: rgb(96, 136, 189);
 }
 
-
-.dark-mode button #switch-label {
-    background-color:rgb(25, 25, 25);
+.dark-mode button.switch-label {
+    background-color: rgb(25, 25, 25);
     border: none;
     padding: 20px 40px;
     text-align: center;
@@ -200,6 +158,7 @@ a:visited {
     cursor: pointer;
     border-radius: 12px;
 }
+
 .switch-slider {
     width: 15px;
     height: 20px;
@@ -207,16 +166,16 @@ a:visited {
     border-radius: 10px;
     transition: .4s;
 }
+
 .switch-slider-right {
     transform: translateX(20px);
-    background-color:rgb(25, 25, 25);
+    background-color: rgb(25, 25, 25);
 }
-.switch{
+
+.switch {
     font-weight: bold;
     padding-top: 20px;
 }
-
-
 
 .modal {
     display: none;
@@ -227,10 +186,11 @@ a:visited {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
     padding-top: 60px;
 }
+
 .modal-content {
     background-color: #fefefe;
     margin: 5% auto;
@@ -238,12 +198,14 @@ a:visited {
     border: 1px solid #888;
     width: 80%;
 }
+
 .close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
+
 .close:hover,
 .close:focus {
     color: black;
@@ -251,20 +213,19 @@ a:visited {
     cursor: pointer;
 }
 
-
 .contact-me-button {
-    background-color: rgb(96, 136, 189); 
-    color: white; 
+    background-color: rgb(96, 136, 189);
+    color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
     width: auto;
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease;
     font-family: Arial;
     font-weight: bold;
 }
 
 .contact-me-button:hover {
-    background-color: rgb(96, 136, 189); 
+    background-color: rgb(96, 136, 189);
 }
